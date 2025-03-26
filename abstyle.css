@@ -1,0 +1,301 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px; /* Reduced header padding for smaller screens */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem; /* Slightly smaller logo for very small screens */
+}
+
+.nav-links {
+    list-style: none;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 55px; /* Adjust top position */
+    left: 0;
+    background-color: #333;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Make the whole area clickable */
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: block;
+    font-size: 24px; /* Slightly smaller hamburger icon */
+    cursor: pointer;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 40px 15px; /* Reduced padding */
+    background-color: #f9f9f9;
+}
+
+.about h1 {
+    font-size: 1.8rem; /* Slightly smaller heading */
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.about p {
+    font-size: 1.1rem; /* Slightly smaller paragraph text */
+    color: #555;
+}
+
+/* Mission and Vision Section */
+.mission-vision {
+    padding: 30px 15px; /* Reduced padding */
+    background-color: #fff;
+}
+
+.mission-vision .container {
+    max-width: 95%; /* Take up more width on smaller screens */
+}
+
+/* Flex container for text and image */
+.content {
+    display: flex;
+    flex-direction: column; /* Stack on smaller screens by default */
+    align-items: center;
+    text-align: center; /* Center text on smaller screens */
+}
+
+/* Mission and Vision Text */
+.miss_vision {
+    width: 95%; /* Take up full width */
+    margin-bottom: 20px; /* Add margin below text */
+}
+
+.mission, .vision {
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.mission h2, .vision h2 {
+    font-size: 1.6rem; /* Smaller headings */
+    color: #333;
+}
+
+.mission p, .vision p {
+    font-size: 1rem; /* Smaller paragraph text */
+    color: #555;
+}
+
+/* Image Container */
+.groupIMG {
+    width: 80%; /* Adjust image width */
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 100%; /* Make image container responsive */
+    max-width: 250px; /* Limit maximum image size */
+    height: auto;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Slightly smaller border-radius */
+    object-fit: cover;
+}
+
+/* Team Section */
+.team {
+    text-align: center;
+    padding: 40px 15px; /* Reduced padding */
+    background-color: #f9f9f9;
+}
+
+.team h2 {
+    font-size: 1.8rem; /* Slightly smaller heading */
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column; /* Stack team members */
+    align-items: center;
+}
+
+.team-member {
+    width: 80%; /* Take up more width */
+    padding: 15px; /* Reduced padding */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px; /* Reduced margin */
+    border-radius: 6px; /* Slightly smaller border-radius */
+}
+
+.team-photo {
+    width: 60px; /* Slightly smaller photo */
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.team-member h3 {
+    font-size: 1.3rem; /* Smaller heading */
+    color: #333;
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.team-member p {
+    font-size: 1rem; /* Smaller paragraph text */
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Reduced padding */
+    font-size: 0.9rem; /* Slightly smaller font */
+}
+
+.social-links {
+    margin-top: 8px; /* Reduced margin */
+}
+
+.social-links a {
+    color: white;
+    margin: 0 8px; /* Reduced margin */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for larger screens to revert mission-vision layout */
+@media screen and (min-width: 769px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .miss_vision {
+        width: 55%;
+        margin-bottom: 0;
+    }
+
+    .groupIMG {
+        width: 40%;
+    }
+}
+
+/* Media Query for small screens (400px and below) */
+@media screen and (max-width: 400px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .hamburger {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        top: 50px;
+    }
+
+    .about h1 {
+        font-size: 1.6rem;
+    }
+
+    .about p {
+        font-size: 0.95rem;
+    }
+
+    .mission h2, .vision h2 {
+        font-size: 1.4rem;
+    }
+
+    .mission p, .vision p {
+        font-size: 0.9rem;
+    }
+
+    .groupIMG {
+        width: 90%;
+    }
+
+    .img {
+        max-width: 200px;
+    }
+
+    .team h2 {
+        font-size: 1.6rem;
+    }
+
+    .team-member {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .team-photo {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 6px;
+    }
+
+    .team-member h3 {
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+    }
+
+    .team-member p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 10px 0;
+        font-size: 0.8rem;
+    }
+
+    .social-links a {
+        margin: 0 5px;
+    }
+}

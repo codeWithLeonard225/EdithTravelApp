@@ -1,0 +1,249 @@
+/* General Styles */
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #333;
+    color: white;
+    padding: 15px 30px;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    color: black;
+    list-style: none;
+    padding: 10px;
+    top: 35px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+}
+
+.dropdown-menu a {
+    color: black;
+}
+
+/* Hamburger Icon (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Gallery Items */
+.gallery-item {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Hamburger menu display */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide the nav-links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    /* Dropdown menu styling for mobile */
+    .dropdown-menu {
+        position: static;
+        background: #444;
+        color: white;
+    }
+
+    .dropdown-menu li {
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Hamburger menu display */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide the nav-links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    /* Dropdown menu styling for mobile */
+    .dropdown-menu {
+        position: static;
+        background: #444;
+        color: white;
+    }
+
+    .dropdown-menu li {
+        padding: 8px;
+    }
+}

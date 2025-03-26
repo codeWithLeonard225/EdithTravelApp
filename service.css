@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px; /* Reduced header padding for smaller screens */
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.2rem; /* Slightly smaller logo for very small screens */
+}
+
+.nav-links {
+    list-style: none;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 55px; /* Adjust top position */
+    left: 0;
+    background-color: #333;
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block; /* Make the whole area clickable */
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: block;
+    font-size: 24px; /* Slightly smaller hamburger icon */
+    cursor: pointer;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 30px 15px; /* Further reduced padding */
+    background-color: #fff;
+}
+
+.services h2 {
+    font-size: 2rem; /* Slightly smaller heading */
+    margin-bottom: 20px; /* Reduced margin */
+    color: #333;
+}
+
+/* Services Grid */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Further reduced gap */
+    max-width: 95%; /* Take up more width on smaller screens */
+    margin: 0 auto;
+}
+
+/* Service Box */
+.service-box {
+    background: white;
+    padding: 20px; /* Reduced padding */
+    width: calc(50% - 10px); /* Two columns on small screens */
+    min-width: auto; /* Adjust min-width */
+    text-align: center;
+    border-radius: 8px; /* Slightly smaller border-radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-3px); /* Less pronounced hover effect */
+}
+
+/* Service Icon */
+.service-box i {
+    font-size: 40px; /* Smaller icon size */
+    color: #ff5733;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Service Heading */
+.service-box h3 {
+    font-size: 1.2rem; /* Smaller heading */
+    color: #333;
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+/* Service Description */
+.service-box p {
+    font-size: 0.9rem; /* Smaller font size */
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px; /* Reduced footer padding */
+    font-size: 0.8rem; /* Smaller font size in footer */
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Media Query for Very Small Screens (400px and below) */
+@media screen and (max-width: 400px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .hamburger {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        top: 50px; /* Adjust top for even smaller headers */
+    }
+
+    .services h2 {
+        font-size: 1.7rem;
+    }
+
+    .services-container {
+        flex-direction: column; /* Single column layout */
+        gap: 10px;
+    }
+
+    .service-box {
+        width: 95%; /* Take up almost full width */
+        padding: 15px;
+    }
+
+    .service-box i {
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+
+    .service-box h3 {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+
+    .service-box p {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+
+    .social-links a {
+        margin: 0 3px;
+    }
+}
