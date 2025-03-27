@@ -74,11 +74,15 @@ nav {
 .hero h1 {
     font-size: 2rem; /* Smaller hero heading */
     margin-bottom: 10px;
+    color: black;
+    font-weight: 900;
 }
 
 .hero p {
     font-size: 1.1rem; /* Smaller hero paragraph */
     margin-bottom: 20px;
+    color: black;
+    font-weight: 900;
 }
 
 .cta-button {
