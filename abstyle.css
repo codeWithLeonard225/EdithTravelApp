@@ -4,69 +4,57 @@ body {
     margin: 0;
     padding: 0;
     background: #f4f4f4;
+    overflow-x: hidden; /* Temporary for debugging */
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 15px 20px;
+    padding: 15px 30px;
 }
 
-/* Navigation Bar (as provided) */
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-between;
+    background: #333;
+    color: white;
+    padding: 15px 30px;
     align-items: center;
-}
-
-.logo {
-    font-size: 1.2rem;
 }
 
 .nav-links {
     list-style: none;
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 55px;
-    left: 0;
-    background-color: #333;
-    z-index: 10;
-}
-
-.nav-links.active {
     display: flex;
+    gap: 20px;
 }
 
 .nav-links li {
-    padding: 10px;
-    text-align: center;
-    width: 100%;
+    position: relative;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     padding: 10px;
-    display: block;
 }
 
-/* Hamburger Icon (as provided) */
+
+
+/* Hamburger Icon (Hidden on Desktop) */
 .hamburger {
-    display: block;
-    font-size: 24px;
+    display: none;
+    font-size: 30px;
     cursor: pointer;
 }
 
-/* Container (as provided) */
+/* Container */
 .container {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 15px;
 }
-
 /* About Section (as provided) */
 .about {
     text-align: center;
@@ -98,7 +86,7 @@ nav {
 /* Flex container for text and image (as provided) */
 .content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
 }
@@ -221,9 +209,40 @@ footer {
 }
 
 /* Media Query for larger screens to revert mission-vision layout (as provided) */
-@media screen and (min-width: 769px) {
+@media screen and (max-width: 768px) {
+    /* Hamburger menu display */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide the nav-links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+
     .content {
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         text-align: left;
     }
@@ -236,7 +255,16 @@ footer {
     .groupIMG {
         width: 40%;
     }
+
+    
 }
+
+
+
+
+
+
+
 
 /* Media Query for larger screens for team members */
 @media screen and (min-width: 601px) {

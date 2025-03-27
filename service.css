@@ -9,55 +9,73 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 15px 20px; /* Reduced header padding for smaller screens */
+    padding: 15px 30px;
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-between;
+    background: #333;
+    color: white;
+    padding: 15px 30px;
     align-items: center;
-}
-
-.logo {
-    font-size: 1.2rem; /* Slightly smaller logo for very small screens */
 }
 
 .nav-links {
     list-style: none;
-    display: none; /* Initially hidden */
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 55px; /* Adjust top position */
-    left: 0;
-    background-color: #333;
-    z-index: 10; /* Ensure it's above other content */
-}
-
-.nav-links.active {
     display: flex;
+    gap: 20px;
 }
 
 .nav-links li {
-    padding: 10px;
-    text-align: center;
-    width: 100%;
+    position: relative;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     padding: 10px;
-    display: block; /* Make the whole area clickable */
 }
 
-/* Hamburger Icon */
-.hamburger {
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    color: black;
+    list-style: none;
+    padding: 10px;
+    top: 35px;
+}
+
+.dropdown:hover .dropdown-menu {
     display: block;
-    font-size: 24px; /* Slightly smaller hamburger icon */
+}
+
+.dropdown-menu li {
+    padding: 5px 10px;
+}
+
+.dropdown-menu a {
+    color: black;
+}
+
+/* Hamburger Icon (Hidden on Desktop) */
+.hamburger {
+    display: none;
+    font-size: 30px;
     cursor: pointer;
 }
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 
 /* Services Section */
 .services {
@@ -131,6 +149,41 @@ footer {
     color: white;
     text-decoration: none;
     margin: 0 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Hamburger menu display */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide the nav-links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    
 }
 
 /* Media Query for Very Small Screens (400px and below) */

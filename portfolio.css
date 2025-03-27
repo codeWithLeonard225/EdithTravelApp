@@ -178,16 +178,7 @@ nav {
         padding: 10px;
     }
 
-    /* Dropdown menu styling for mobile */
-    .dropdown-menu {
-        position: static;
-        background: #444;
-        color: white;
-    }
-
-    .dropdown-menu li {
-        padding: 8px;
-    }
+    
 }
 
 
