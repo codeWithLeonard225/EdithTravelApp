@@ -237,3 +237,11 @@ footer {
         margin: 0 3px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .social-links{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background: #f4f4f4;
-   
+
 }
 
 header {
@@ -48,7 +48,7 @@ nav {
 
 /* Container (as provided) */
 .container {
- 
+
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 15px;
@@ -98,8 +98,8 @@ nav {
 .service-box {
     display: flex;
     gap: 20px;
-    justify-content: center; 
-    flex-wrap: wrap; 
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .services h2 {
@@ -114,9 +114,9 @@ nav {
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-    flex-basis: calc(33.33% - 20px); 
-    margin-bottom: 20px; 
-} 
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
 
 .service h3 {
     font-size: 1.2rem;
@@ -125,7 +125,7 @@ nav {
 
 .service p {
     font-size: 0.95rem;
-} 
+}
 
 /* Call-to-Action Section (as provided) */
 .cta {
@@ -213,7 +213,9 @@ footer {
 }
 
 .social-links a {
+    color: white;
     margin: 0 8px;
+    text-decoration: none;
 }
 
 
@@ -223,45 +225,56 @@ footer {
 
     /* Hamburger menu display */
     .hamburger {
-     display: block;
- }
+        display: block;
+    }
 
- /* Hide the nav-links by default */
- .nav-links {
-     display: none;
-     flex-direction: column;
-     width: 80%;
-     position: absolute;
-     top: 60px;
-     left: 0;
-     background-color: #333;
-     align-items: center;
+    /* Hide the nav-links by default */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        align-items: center;
 
- }
+    }
 
- .nav-links.active {
-     display: flex;
-  
- }
+    .nav-links.active {
+        display: flex;
 
- .nav-links li {
-     padding: 10px;
-     text-align: center;
-     width: 100%;
- }
+    }
 
- .nav-links a {
-     padding: 10px;
- }
- .service-box {
-     flex-direction: column;  
-     align-items: center;  
- }
+    .nav-links li {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 10px;
+    }
+
+    .service-box {
+        flex-direction: column;
+        align-items: center;
+    }
 
 
- .service {
-     flex-basis: auto; 
-     width: 90%;
-     margin-bottom: 15px; 
- }
+    .service {
+        flex-basis: auto;
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
 }

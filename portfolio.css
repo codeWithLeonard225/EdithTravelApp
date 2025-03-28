@@ -194,6 +194,12 @@ footer {
     padding: 15px;
 }
 
+.social-links a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
 
 
 @media screen and (max-width: 768px) {
@@ -236,5 +242,13 @@ footer {
 
     .dropdown-menu li {
         padding: 8px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
 }

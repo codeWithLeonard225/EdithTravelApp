@@ -150,6 +150,14 @@ footer {
     font-size: 0.8rem; /* Smaller footer font */
 }
 
+
+.social-links a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+
 /* Media Query for Small Screens (600px and below) */
 @media (max-width: 600px) {
     .contact h2 {
@@ -242,4 +250,11 @@ footer {
     .error {
         font-size: 0.7rem;
     }
+
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
 }
+
